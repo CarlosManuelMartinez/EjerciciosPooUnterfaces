@@ -1,0 +1,15 @@
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\bin\Debug\net6.0\1Vector3D.exe
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\bin\Debug\net6.0\1Vector3D.deps.json
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\bin\Debug\net6.0\1Vector3D.runtimeconfig.json
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\bin\Debug\net6.0\1Vector3D.dll
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\bin\Debug\net6.0\1Vector3D.pdb
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\obj\Debug\net6.0\1Vector3D.csproj.AssemblyReference.cache
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\obj\Debug\net6.0\1Vector3D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\obj\Debug\net6.0\1Vector3D.AssemblyInfoInputs.cache
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\obj\Debug\net6.0\1Vector3D.AssemblyInfo.cs
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\obj\Debug\net6.0\1Vector3D.csproj.CoreCompileInputs.cache
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\obj\Debug\net6.0\1Vector3D.dll
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\obj\Debug\net6.0\refint\1Vector3D.dll
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\obj\Debug\net6.0\1Vector3D.pdb
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\obj\Debug\net6.0\1Vector3D.genruntimeconfig.cache
+C:\Users\carlo\OneDrive\Documentos\3_DAM 2º 23-24\Interfaces\Ejercicios\1Vector3D\1Vector3D\obj\Debug\net6.0\ref\1Vector3D.dll
