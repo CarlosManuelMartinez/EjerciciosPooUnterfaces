@@ -51,38 +51,40 @@ internal class Vector3D
 
         Console.WriteLine(c1.ToString());
         Console.WriteLine("La suma de " + c1.ToString() + " + " + c2.ToString() + " da como resultado " + c1.Suma(c2));
+        Console.WriteLine("La suma de {0} + {1} da como resultado {2}",c1 ,c2, c1.Suma(c2));
         Console.WriteLine("La resta de " + c1.ToString() + " - " + c2.ToString() + " da como resultado " + c1.Resta(c2));
         Console.WriteLine("La multipicacion de " + c1.ToString() + " por " + c2.ToString() +
             " da como resultado " + c1.Multiplicacion(c2));
 
+        Console.WriteLine();
         Console.WriteLine("------------------------------------------------------");
         Console.WriteLine("CONJUNTO NUMEROS");
+        
         Console.WriteLine();
 
-        IList<int> miListaDeNumeros = new List<int>();
-        miListaDeNumeros.Add(1);
-        miListaDeNumeros.Add(2);
-        miListaDeNumeros.Add(3);
-        miListaDeNumeros.Add(2);
-        miListaDeNumeros.Add(5);
-        miListaDeNumeros.Add(6);
-
-        HashSet<int> evenNumbers = new HashSet<int>();
-        evenNumbers.Add(2);
-        evenNumbers.Add(1);
-        evenNumbers.Add(3); 
-        evenNumbers.Add(4); 
-        evenNumbers.Add(4);
-        evenNumbers.Add(3);
-
-        foreach (int num in evenNumbers)
+        Conjunto c = new Conjunto();
+        
+        for (int i = 0; i < 100; i++)
         {
-            Console.WriteLine("HasSet:{0} : {1}",num.GetHashCode(),num);
+            c.Agregar(i);
         }
-        foreach (int numero in miListaDeNumeros)
+
+        int num = 45;
+        int num2 = 200;
+
+        if (c.EsMiembro(num2))
         {
-            Console.WriteLine("IList:{0} : {1}",numero.GetHashCode(),numero);
+            Console.WriteLine("El numero {0} esta en la lista", num2);
+
         }
+        else
+        {
+            Console.WriteLine("El numero {0} No esta en la lista", num2);
+        }
+
+       
+
+        
     }
     public class Vector
     {

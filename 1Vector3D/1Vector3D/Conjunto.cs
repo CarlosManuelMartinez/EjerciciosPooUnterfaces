@@ -55,9 +55,33 @@ Para más información sobre la teoría de conjuntos ver */
         //Copiar (copia un conjunto en otro).
         public void Copiar(Conjunto c)
         {
+            try
+            {
+                foreach (int num in this.miConjunto)
+                {
+                    c.Agregar(num);
+                }
+            }
+            catch (Exception e)
+            {
 
+
+                Console.WriteLine(e.Message);
+            }
+            
+        }
+
+        //EsMiembro (integer c) (devuelve un valor booleano si el conjunto
+        //contiene el entero dado)
+
+        public bool EsMiembro(int numero)
+        {
+            bool esMiembro = false;
+            if (miConjunto.Contains(numero))
+            {
+                esMiembro = true;
+            }
+            return esMiembro;
         }
     }
-
-
 }
