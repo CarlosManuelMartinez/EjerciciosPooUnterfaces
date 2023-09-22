@@ -8,7 +8,7 @@ namespace _1Vector3D
 {
     public class Imaginario
     {
-        
+
         public double D { get; set; }
         //private double d;
         private String i;
@@ -34,7 +34,7 @@ namespace _1Vector3D
         override
             public String ToString()
         {
-            return this.D.ToString("F2")+""+i;
+            return this.D.ToString("F2") + "" + i;
         }
 
     }

@@ -1,5 +1,5 @@
 ﻿using _1Vector3D;
-using System.Globalization;
+using System.Xml;
 
 internal class Vector3D
 {
@@ -10,7 +10,7 @@ internal class Vector3D
     Método NormaMax(), que permite obtener la norma del vector.
     v=(x,y,z) raiz de x
 */
-    
+
     private static void Main(string[] args)
     {
         Console.WriteLine("------------------------------------------------------");
@@ -22,8 +22,8 @@ internal class Vector3D
         Console.WriteLine("La norma del vector " + v1.ToString() + " es : " + v1.NormaMax());
         Console.WriteLine("La norma del vector " + v2.ToString() + " es : " + v2.NormaMax());
 
-        
-       
+
+
         if (v2.Igual(v1))
         {
             Console.WriteLine("Los vectores " + v1.ToString() + " y " + v1.ToString() + " son iguales");
@@ -43,18 +43,46 @@ internal class Vector3D
         Imaginario icopia = new Imaginario(i1);
         icopia.D = 23;
         Console.WriteLine(icopia.ToString());
-          
-        Console.WriteLine("este es el double del imaginario: {0}",i1.D);
+
+        Console.WriteLine("este es el double del imaginario: {0}", i1.D);
         Imaginario i2 = new Imaginario(11d);
         Complejo c1 = new Complejo(4.3d, i1);
         Complejo c2 = new Complejo(2.3d, i2);
 
         Console.WriteLine(c1.ToString());
-        Console.WriteLine("La suma de "+c1.ToString()+" + "+c2.ToString()+" da como resultado "+ c1.Suma(c2));
+        Console.WriteLine("La suma de " + c1.ToString() + " + " + c2.ToString() + " da como resultado " + c1.Suma(c2));
         Console.WriteLine("La resta de " + c1.ToString() + " - " + c2.ToString() + " da como resultado " + c1.Resta(c2));
-        Console.WriteLine("La multipicacion de " + c1.ToString() + " por " + c2.ToString() + 
-            " da como resultado " +c1.Multiplicacion(c2));
+        Console.WriteLine("La multipicacion de " + c1.ToString() + " por " + c2.ToString() +
+            " da como resultado " + c1.Multiplicacion(c2));
 
+        Console.WriteLine("------------------------------------------------------");
+        Console.WriteLine("CONJUNTO NUMEROS");
+        Console.WriteLine();
+
+        IList<int> miListaDeNumeros = new List<int>();
+        miListaDeNumeros.Add(1);
+        miListaDeNumeros.Add(2);
+        miListaDeNumeros.Add(3);
+        miListaDeNumeros.Add(2);
+        miListaDeNumeros.Add(5);
+        miListaDeNumeros.Add(6);
+
+        HashSet<int> evenNumbers = new HashSet<int>();
+        evenNumbers.Add(2);
+        evenNumbers.Add(1);
+        evenNumbers.Add(3); 
+        evenNumbers.Add(4); 
+        evenNumbers.Add(4);
+        evenNumbers.Add(3);
+
+        foreach (int num in evenNumbers)
+        {
+            Console.WriteLine("HasSet:{0} : {1}",num.GetHashCode(),num);
+        }
+        foreach (int numero in miListaDeNumeros)
+        {
+            Console.WriteLine("IList:{0} : {1}",numero.GetHashCode(),numero);
+        }
     }
     public class Vector
     {
