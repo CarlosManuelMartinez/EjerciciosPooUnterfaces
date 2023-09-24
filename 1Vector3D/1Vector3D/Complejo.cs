@@ -35,7 +35,7 @@ namespace _1Vector3D
             set { imaginarioComplejo = value; }
         }
         override
-        public String  ToString()
+        public string  ToString()
         {
             return this.entero.ToString("F2") + "+" + this.imaginarioComplejo.ToString();
         }

@@ -7,35 +7,12 @@ using System.Threading.Tasks;
 
 namespace _1Vector3D
 {
-    /*Crea la clase Conjunto que gestiones un conjunto de números enteros (integer)
-con ayuda de un vector ordenado de tamaño infinito y que se caracteriza por el
-hecho de cada elemento del conjunto es único. Implementar también las
-siguientes operaciones para el conjunto:
-• Vaciar (vacía el conjunto)
-• Agregar (añade un elemento al conjunto)
-• Eliminar (integer c) (elimina el entero c del conjunto)
-• Copiar (copia un conjunto en otro)
-• EsMiembro (integer c) (devuelve un valor booleano si el conjunto
-contiene el entero dado).
-Antonio Javier Rodríguez Bas Página 22 de 23
-• EsIgual (devuelve un valor booleano si los dos conjuntos son
-iguales)
-• ToString() (convierte a una versión formateada el conjunto)
-• EsVacio() (devuelve un valor booleano si el conjunto no tiene
-elementos)
-o Cardinal() (devuelve un entero con el número de elementos
-del conjunto)
-o Unión() (realiza la unión de dos conjuntos)
-o Intersección() (realiza la intersección de dos conjuntos)
-o Diferencia() (realiza la diferencia de dos conjuntos)
-o DiferenciaSimétrica() (realiza la diferencia simétrica de dos
-conjuntos)
-Para más información sobre la teoría de conjuntos ver */
-    internal class Conjunto {
-
+    public class Conjunto {
+        public string Nombre { get; set; }
         private HashSet<int> miConjunto;
-        public Conjunto() {
+        public Conjunto(string nombre) {
             this.miConjunto = new HashSet<int>();
+            this.Nombre = nombre;
         }
         //Vaciar (vacía el conjunto).
         public void Vaciar()
@@ -55,6 +32,7 @@ Para más información sobre la teoría de conjuntos ver */
         //Copiar (copia un conjunto en otro).
         public void Copiar(Conjunto c)
         {
+            c.miConjunto.Clear();
             try
             {
                 foreach (int num in this.miConjunto)
@@ -64,11 +42,8 @@ Para más información sobre la teoría de conjuntos ver */
             }
             catch (Exception e)
             {
-
-
                 Console.WriteLine(e.Message);
             }
-            
         }
 
         //EsMiembro (integer c) (devuelve un valor booleano si el conjunto
@@ -77,11 +52,91 @@ Para más información sobre la teoría de conjuntos ver */
         public bool EsMiembro(int numero)
         {
             bool esMiembro = false;
+
             if (miConjunto.Contains(numero))
             {
                 esMiembro = true;
+                Console.WriteLine("El numero {0} esta en la lista", numero);
             }
+            else
+            {
+                Console.WriteLine("El numero {0} No esta en la lista", numero);
+            }
+
             return esMiembro;
         }
+
+        //EsIgual (devuelve un valor booleano si los dos conjuntos son iguales)
+
+        public bool EsIgual(Conjunto c)
+        {
+            return this.miConjunto.SetEquals(c.miConjunto);
+        }
+        //ToString() (convierte a una versión formateada el conjunto)
+        public override string ToString()
+        {
+            string text = "";
+            foreach (int n in this.miConjunto)
+            {
+                text += " numero "+ n.ToString()+"\n";
+            }
+            return text;
+        }
+        //EsVacio() (devuelve un valor booleano si el conjunto no tiene elementos)
+        
+        public bool EstaVacio()
+        {
+            bool vacio = false;
+             if(this.miConjunto.Count == 0)
+            {
+                vacio = true;
+            }
+
+            return vacio;
+        }
+        //Cardinal() (devuelve un entero con el número de elementos del conjunto)
+        
+        public int Cardinal()
+        {
+            return this.miConjunto.Count;
+        }
+
+        //Unión() (realiza la unión de dos conjuntos)
+        /*Modifica el objeto HashSet<T> actual para que contenga todos los elementos 
+         * que están presentes en él y en la colección especificada o en ambos.*/
+        public void Union(Conjunto c)
+        {
+            this.miConjunto.Union(c.miConjunto);
+        }
+
+        //Intersección() (realiza la intersección de dos conjuntos)
+        /*Modifica el objeto HashSet<T> actual para que solo contenga elementos que están presentes
+         * en ese objeto y en la colección especificada.*/
+        public void Interseccion(Conjunto c)
+        {
+            this.miConjunto.IntersectWith(c.miConjunto);
+        }
+
+        //Diferencia() (realiza la diferencia de dos conjuntos)
+        /*ExceptWith : Quita del objeto HashSet<T> actual todos los elementos de la colección especificada.*/
+        public void Diferencia(Conjunto c)
+        {
+           this.miConjunto.ExceptWith(c.miConjunto);
+
+        }
+
+        //DiferenciaSimétrica() (realiza la diferencia simétrica de dos conjuntos)
+        /* SymmetricExceptWith : Modifica el objeto HashSet<T> actual para que contenga únicamente 
+         * los elementos que están presentes en ese objeto o en la colección especificada,
+         * pero no en ambos.*/
+        public void DiferenciaSimetrica(Conjunto c)
+        {
+            this.miConjunto.SymmetricExceptWith(c.miConjunto);
+
+        }
+
+
+
+
     }
 }

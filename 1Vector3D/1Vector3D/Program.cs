@@ -1,5 +1,4 @@
 ﻿using _1Vector3D;
-using System.Xml;
 
 internal class Vector3D
 {
@@ -51,7 +50,7 @@ internal class Vector3D
 
         Console.WriteLine(c1.ToString());
         Console.WriteLine("La suma de " + c1.ToString() + " + " + c2.ToString() + " da como resultado " + c1.Suma(c2));
-        Console.WriteLine("La suma de {0} + {1} da como resultado {2}",c1 ,c2, c1.Suma(c2));
+        Console.WriteLine("La suma de {0} + {1} da como resultado {2}", c1, c2, c1.Suma(c2));
         Console.WriteLine("La resta de " + c1.ToString() + " - " + c2.ToString() + " da como resultado " + c1.Resta(c2));
         Console.WriteLine("La multipicacion de " + c1.ToString() + " por " + c2.ToString() +
             " da como resultado " + c1.Multiplicacion(c2));
@@ -59,32 +58,51 @@ internal class Vector3D
         Console.WriteLine();
         Console.WriteLine("------------------------------------------------------");
         Console.WriteLine("CONJUNTO NUMEROS");
-        
+
         Console.WriteLine();
 
-        Conjunto c = new Conjunto();
-        
-        for (int i = 0; i < 100; i++)
+        Conjunto pares = new Conjunto("Pares");
+        Console.WriteLine(pares.Nombre);
+        Conjunto impares = new Conjunto("Impares");
+        Conjunto tresEnTres = new Conjunto("Tres en tres");
+        Conjunto seguidos = new Conjunto("seguidos");
+        Conjunto vacio = new Conjunto("Vacio");
+        int sum = 0;
+        for (int i = 1; i <= 10; i+=2)
         {
-            c.Agregar(i);
+            sum += 3;
+            impares.Agregar(i);
+            pares.Agregar(i+1);
+            tresEnTres.Agregar(sum);
         }
 
-        int num = 45;
+        for (int i = 0; i < 10; i++)
+        {
+            seguidos.Agregar(i);
+        }
+
+        int num = 4;
         int num2 = 200;
 
-        if (c.EsMiembro(num2))
-        {
-            Console.WriteLine("El numero {0} esta en la lista", num2);
+        pares.EsMiembro(num);
+        pares.EsMiembro(num2);
+        Console.WriteLine("NUMEROS PARES:\n{0}", pares.ToString());
+        Console.WriteLine("NUMEROS INPARES:\n{0}", impares.ToString());
+        Console.WriteLine("NUMEROS DE 3 EN 3:\n{0}", tresEnTres.ToString());
+        Console.WriteLine("NUMEROS DE SEGUIDOS:\n{0}", seguidos.ToString());
+        Console.WriteLine("Que el conjunto d y el conjunto c son iguales es: " + pares.EsIgual(impares));
+        Console.WriteLine("Que el conjunto e y el conjunto c son iguales es: " + pares.EsIgual(tresEnTres));
+        Console.WriteLine("Que el conjunto e y el conjunto d son iguales es: " + impares.EsIgual(tresEnTres));
+        Console.WriteLine("Que el conjunto e esta vacio es: " + tresEnTres.EstaVacio());
+        string verdaderoOFalso = tresEnTres.EstaVacio() ? "verdadero" : "falso";
+        Console.WriteLine("Que el conjunto e esta vacio es " + verdaderoOFalso);
+        Console.WriteLine("La diferencia entre el conjunto {0} y/e {1} es: ",pares.Nombre,seguidos.Nombre);
+        seguidos.Diferencia(pares);
+        Console.WriteLine(seguidos);
+        Console.WriteLine("La diferencia simetrica entre el conjunto {0} y/e {1} es: ", pares.Nombre, impares.Nombre);
+        pares.DiferenciaSimetrica(impares);
+        Console.WriteLine(pares);
 
-        }
-        else
-        {
-            Console.WriteLine("El numero {0} No esta en la lista", num2);
-        }
-
-       
-
-        
     }
     public class Vector
     {
